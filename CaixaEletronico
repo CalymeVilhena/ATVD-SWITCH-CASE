@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+int main() {
+    int valor, nota100, nota50, nota20, nota10, resto;
+
+    printf("Digite o valor: ");
+    scanf("%d", &valor);
+	
+    nota100 = valor / 100;
+    resto = valor % 100;
+    nota50 = resto / 50;
+    resto %= 50;
+
+    nota20 = resto / 20;
+    resto %= 20;
+
+    nota10 = resto / 10;
+    printf("Para formar o valor de %d, serão necessárias:\n", valor);
+
+    switch (nota100 > 0) {
+        case 1:
+            printf("%d nota(s) de 100\n", nota100);
+            break;
+    }
+    switch (nota50 > 0) {
+        case 1:
+            printf("%d nota(s) de 50\n", nota50);
+            break;
+    }
+    switch (nota20 > 0) {
+        case 1:
+            printf("%d nota(s) de 20\n", nota20);
+            break;
+    }
+    switch (nota10 > 0) {
+        case 1:
+            printf("%d nota(s) de 10\n", nota10);
+            break;
+    }
+
+    return 0;
+}
