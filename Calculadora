@@ -1,0 +1,31 @@
+#include <stdio.h>
+	int main(){
+		int a1,a2,opcao;
+		int adicao,subtracao,multiplicacao,divisao,soma;
+		
+		printf("numero 1:");
+		scanf("%d",&a1);
+		printf("numero 2:");
+		scanf("%d",&a2);
+		printf("Conta matematica desejada:");
+		scanf("%d",&opcao);
+		
+		switch(opcao){
+			case 1:
+				soma=a1+a2;
+				printf("%d",soma);
+				break;
+			case 2:
+				subtracao= a1-a2;
+				printf("%d",subtracao);
+				break;
+			case 3:
+				multiplicacao= a1*a2;
+				printf("%d",multiplicacao);
+				break;
+			case 4:
+				divisao = a1/a2;
+				printf("%d",divisao);
+				break ;
+			}
+}
