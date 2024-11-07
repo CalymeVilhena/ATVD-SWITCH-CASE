@@ -1,0 +1,15 @@
+#include <stdio.h>
+	int main(){
+		int N,numero;
+			printf("este numero:");
+			scanf("%d",&numero);
+			printf("eh multiplo deste:");
+			scanf("%d",&N);
+	
+				if(numero%N==0){
+					printf("O numero %d eh multiplo de %d",N,numero);
+				}else{
+					printf("Nao eh multiplo");
+				}
+		
+	}
