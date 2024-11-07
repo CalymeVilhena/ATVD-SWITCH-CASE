@@ -1,0 +1,74 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+
+    char pais1[20], pais2[20], pais3[20];
+    int ouro1, ouro2, ouro3, prata1, prata2, prata3, bronze1, bronze2, bronze3;
+    int total1, total2, total3;
+
+
+    printf("Pais 1: ");
+    scanf("%s", pais1);
+    printf("Ouro: ");
+    scanf("%d", &ouro1);
+    printf("Prata: ");
+    scanf("%d", &prata1);
+    printf("Bronze: ");
+    scanf("%d", &bronze1);
+
+    printf("Pais 2: ");
+    scanf("%s", pais2);
+    printf("Ouro: ");
+    scanf("%d", &ouro2);
+    printf("Prata: ");
+    scanf("%d", &prata2);
+    printf("Bronze: ");
+    scanf("%d", &bronze2);
+
+
+    printf("Pais 3: ");
+    scanf("%s", pais3);
+    printf("Ouro: ");
+    scanf("%d", &ouro3);
+    printf("Prata: ");
+    scanf("%d", &prata3);
+    printf("Bronze: ");
+    scanf("%d", &bronze3);
+
+    total1 = (ouro1 * 3) + (prata1 * 2) + (bronze1 * 1);
+    total2 = (ouro2 * 3) + (prata2 * 2) + (bronze2 * 1);
+    total3 = (ouro3 * 3) + (prata3 * 2) + (bronze3 * 1);
+
+
+    if (total1 >= total2 && total1 >= total3) {
+        printf("Primeiro: %s\n", pais1);
+        if (total2 >= total3) {
+            printf("Segundo: %s\n", pais2);
+            printf("Terceiro: %s\n", pais3);
+        } else {
+            printf("Segundo: %s\n", pais3);
+            printf("Terceiro: %s\n", pais2);
+        }
+    } else if (total2 >= total1 && total2 >= total3) {
+        printf("Primeiro: %s\n", pais2);
+        if (total1 >= total3) {
+            printf("Segundo: %s\n", pais1);
+            printf("Terceiro: %s\n", pais3);
+        } else {
+            printf("Segundo: %s\n", pais3);
+            printf("Terceiro: %s\n", pais1);
+        }
+    } else {
+        printf("Primeiro: %s\n", pais3);
+        if (total1 >= total2) {
+            printf("Segundo: %s\n", pais1);
+            printf("Terceiro: %s\n", pais2);
+        } else {
+            printf("Segundo: %s\n", pais2);
+            printf("Terceiro: %s\n", pais1);
+        }
+    }
+
+    return 0;
+}
