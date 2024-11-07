@@ -1,38 +1,34 @@
-#include <stdio.h>
-
-int main() {
-    float temp1, temp2, temp3;
-
-    // Solicita ao usuário as três temperaturas
-    printf("Digite a temperatura da manhã: ");
-    scanf("%f", &temp1);
-    
-    printf("Digite a temperatura da tarde: ");
-    scanf("%f", &temp2);
-    
-    printf("Digite a temperatura da noite: ");
-    scanf("%f", &temp3);
-
-    // Ordena e imprime diretamente em ordem crescente
-    if (temp1 <= temp2 && temp1 <= temp3) {
-        if (temp2 <= temp3) {
-            printf("Temperaturas em ordem crescente: %.2f, %.2f, %.2f\n", temp1, temp2, temp3);
-        } else {
-            printf("Temperaturas em ordem crescente: %.2f, %.2f, %.2f\n", temp1, temp3, temp2);
-        }
-    } else if (temp2 <= temp1 && temp2 <= temp3) {
-        if (temp1 <= temp3) {
-            printf("Temperaturas em ordem crescente: %.2f, %.2f, %.2f\n", temp2, temp1, temp3);
-        } else {
-            printf("Temperaturas em ordem crescente: %.2f, %.2f, %.2f\n", temp2, temp3, temp1);
-        }
-    } else {
-        if (temp1 <= temp2) {
-            printf("Temperaturas em ordem crescente: %.2f, %.2f, %.2f\n", temp3, temp1, temp2);
-        } else {
-            printf("Temperaturas em ordem crescente: %.2f, %.2f, %.2f\n", temp3, temp2, temp1);
-        }
-    }
-
-    return 0;
-}
+#include <stdio.h> 
+	int main(){
+		float tempmanha,temptarde,tempnoite;
+			printf("Temperatura manha: ");
+			scanf("%f",&tempmanha);
+			printf("Temperatura tarde: ");
+			scanf("%f",&temptarde);
+			printf("Temperatura noite: ");
+			scanf("%f",&tempnoite);			
+		float Maior,Menor,Media;
+		
+			if(tempmanha>=temptarde && tempmanha>=tempnoite){
+				Maior=tempmanha;
+			}else if(temptarde>=tempmanha && temptarde>=tempnoite){
+				Maior= temptarde;
+			}else if(tempnoite>=tempmanha && tempnoite>=temptarde){
+				Maior = tempnoite;
+			}if(tempmanha<=temptarde && tempmanha<=tempnoite){
+				Menor = tempmanha;
+			}else if(temptarde<=tempmanha && temptarde<=tempnoite){
+				Menor = temptarde;
+			}else if(tempnoite<=tempmanha && tempnoite<=temptarde){
+				Menor = tempnoite;
+			}
+			if(tempmanha != Maior && tempmanha!= Menor){
+					Media=tempmanha;
+			}else if(temptarde != Maior && temptarde != Menor){
+					Media=temptarde;
+			}else if(tempnoite != Maior && tempnoite!= Menor){
+					Media=tempnoite;
+			}
+		printf("%.2f , %.2f, %.2f",Menor,Media,Maior);
+			
+	}
