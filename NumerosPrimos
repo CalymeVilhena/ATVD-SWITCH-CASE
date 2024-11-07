@@ -1,0 +1,11 @@
+#include <stdio.h>
+	int main(){
+		float numero;
+			printf("me de um numero:");
+			scanf("%f",&numero);
+			if(numero>1 && numero/2 && numero/1){
+				printf("Eh um numero primo");
+			}else{
+				printf("Nao eh primo");
+			}
+	}
