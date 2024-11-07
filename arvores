@@ -1,0 +1,23 @@
+#include <stdio.h>
+	int main(){
+		int h1,h2,h3,a1,a2,a3;
+			printf("Arvore 1:");
+			scanf("%d",&h1);
+			printf("Arvore 2:");
+			scanf("%d",&h2);
+			printf("Arvore 3:");
+			scanf("%d",&h3);
+				if(h1>h2 && h1>h3){
+					printf("A arvore 1 eh a maior");
+				}else if (h2>h1 && h2>h3){
+					printf("A avore 2 eh a maior ");
+				}else if (h3>h2 && h3>h1){
+					printf("A arvore 3 eh a maior");}
+				if(h1<h2 && h1<h3){
+					printf("\n a arvore 1 eh a menor");
+				}else if(h2<h2 && h2<h3){
+					printf("\n a arvore 2 eh a menor");
+				}else if (h3<h2 && h3<h3){
+					printf("\na arvore 3 eh a menor");
+				}
+	}
